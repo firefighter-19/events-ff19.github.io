@@ -1,0 +1,787 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Bankir-Retro";
+  src: url("fonts/Bankir-Retro.eot");
+  src: local("☺"), url("../fonts/fonts/Bankir-Retro.woff") format("woff"), url("fonts/Bankir-Retro.ttf") format("truetype"), url("fonts/Bankir-Retro.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BankGothicMdBT";
+  src: url("../fonts/BankGothicMdBT.eot");
+  src: local("☺"), url("../fonts/BankGothicMdBT.woff") format("woff"), url("../fonts/BankGothicMdBT.ttf") format("truetype"), url("../fonts/BankGothicMdBT.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: black;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.wrapper__background {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+@media (max-width: 968px) {
+  .wrapper__background {
+    position: fixed;
+    opacity: 0.5;
+  }
+}
+
+.wrapper__background__left {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../source/vectors/purple.svg") bottom left/auto 50% no-repeat;
+  margin: 0 0 27px 0;
+}
+@media (max-width: 1600px) {
+  .wrapper__background__left {
+    bottom: 0;
+    position: absolute;
+  }
+}
+@media (max-width: 968px) {
+  .wrapper__background__left {
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    left: 0;
+    top: -25%;
+  }
+}
+
+.wrapper__background__right {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../source/vectors/orange.svg") bottom right/auto 100% no-repeat;
+}
+@media (max-width: 1600px) {
+  .wrapper__background__right {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+@media (max-width: 968px) {
+  .wrapper__background__right {
+    height: 70%;
+    width: 70%;
+    right: 0;
+    bottom: -7%;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper__background__right {
+    height: 70%;
+    width: 70%;
+    right: 0;
+    bottom: -10%;
+  }
+}
+
+.header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  z-index: 1;
+  flex-grow: 1;
+}
+@media (max-width: 968px) {
+  .header {
+    height: 80px;
+  }
+}
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: black;
+}
+
+.header__container {
+  margin: 0 auto;
+  max-width: 1180px;
+  z-index: 2;
+}
+@media (max-width: 968px) {
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    transform: translateY(-100%);
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    transition: all 0.5s ease 0s;
+    opacity: 0.85;
+  }
+  .header__container.active {
+    transform: translateY(0%);
+  }
+}
+
+.header__border {
+  width: 100%;
+  position: absolute;
+  top: 90px;
+  height: 1.5px;
+  background-color: #f98816;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f98816 25%, #ff5db1 51%, #c147ab 78%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f98816", endColorstr="#c147ab",GradientType=1 );
+  /* IE6-9 */
+  z-index: 3;
+}
+@media (max-width: 968px) {
+  .header__border {
+    top: 80px;
+    height: 2px;
+  }
+}
+.header__border.active {
+  transform: rotate(180deg);
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+@media (max-width: 968px) {
+  .nav__menu {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.nav__menu__list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__menu__list-item {
+  font-family: "BankGothicMdBT";
+  font-size: 16px;
+  line-height: 17px;
+  z-index: 3;
+}
+@media (max-width: 968px) {
+  .nav__menu__list-item li {
+    opacity: 0;
+    padding: 135px 0 0 0;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1180 - 320)));
+  }
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.item__link {
+  color: #36c9a4;
+  padding: 0 15px;
+}
+.item__link:hover {
+  color: white;
+}
+
+.nav__menu__links {
+  z-index: 3;
+  display: flex;
+}
+.nav__menu__links svg {
+  margin: 0 20px;
+}
+.nav__menu__links svg:hover {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+}
+@media (max-width: 968px) {
+  .nav__menu__links {
+    display: none;
+  }
+}
+
+.nav__menu__links-media {
+  display: none;
+}
+@media (max-width: 968px) {
+  .nav__menu__links-media {
+    display: block;
+    position: fixed;
+    top: 33px;
+    left: 10px;
+    z-index: 4;
+  }
+  .nav__menu__links-media img {
+    padding: 0 18px;
+  }
+}
+
+.nav__container__burger {
+  display: none;
+}
+@media (max-width: 968px) {
+  .nav__container__burger {
+    display: block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 24px;
+    right: 17px;
+    cursor: pointer;
+    z-index: 4;
+    background: linear-gradient(43.78deg, rgba(255, 3, 200, 0.5) 7.14%, rgba(255, 0, 61, 0.5) 105.1%);
+  }
+  .nav__container__burger.active {
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(63.9deg, rgba(0, 255, 255, 0.5) 0%, rgba(102, 255, 204, 0.5) 100%);
+    width: 36px;
+    height: 36px;
+  }
+  .nav__container__burger span {
+    background: linear-gradient(55.01deg, #00FFFF 0%, #66FFCC 100%);
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    top: 17px;
+    right: 2px;
+    transition: all 0.3s ease 0s;
+    z-index: 3;
+  }
+  .nav__container__burger span:first-child {
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .nav__container__burger span:last-child {
+    top: 25px;
+    transition: all 0.3s ease 0s;
+  }
+  .nav__container__burger.active span {
+    width: 30px;
+    left: 2.6px;
+    top: 4px;
+    transform: scale(0);
+    background: linear-gradient(264.69deg, #FF003D -7.43%, #FF03C8 100%);
+  }
+  .nav__container__burger.active span:first-child {
+    transform: rotate(45deg);
+    top: 16px;
+  }
+  .nav__container__burger.active span:last-child {
+    transform: rotate(-45deg);
+    top: 17px;
+  }
+}
+
+.container__events {
+  height: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.main__events {
+  position: relative;
+  padding: 150px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.block__image {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 968px) {
+  .block__image {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.block__image__picture {
+  flex: 0 0 auto;
+  justify-content: center;
+  max-width: 520px;
+  max-height: 300px;
+}
+.block__image__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 968px) {
+  .block__image__picture {
+    padding: 0 0 30px 0;
+  }
+}
+
+.block__image__description {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.description__header {
+  color: white;
+  font-size: calc(14px + 6 * ((100vw - 320px) / (1180 - 320)));
+  line-height: 30px;
+}
+@media (max-width: 968px) {
+  .description__header {
+    margin: 0 0 20px 0;
+  }
+}
+
+.description__footer {
+  color: white;
+  font-size: calc(12px + 2 * ((100vw - 320px) / (1180 - 320)));
+  line-height: 24px;
+}
+
+.hashtag {
+  color: #f98816;
+}
+
+.link {
+  color: #36c9a4;
+}
+
+.main__events__newmembers {
+  padding: 0 0 35px 0;
+}
+
+.main__events__tipbot {
+  padding: 0 0 35px 0;
+}
+
+.main__events__partn-study {
+  padding: 0 0 35px 0;
+}
+
+.hidden-description-partn-study {
+  display: none;
+}
+.hidden-description-partn-study.active {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 615px;
+}
+.hidden-description-partn-study.active a {
+  color: #36c9a4;
+}
+
+.button-partner-study {
+  height: 50px;
+  width: 175px;
+  background: linear-gradient(61.4deg, #00FFFF 10.96%, #66FFCC 86.16%);
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2%;
+  font-family: "BankGothicMdBT";
+  margin: 40px 0 0 0;
+}
+.button-partner-study:hover {
+  background: transparent;
+  color: #36c9a4;
+  border: 2px solid #36c9a4;
+}
+@media (max-width: 968px) {
+  .button-partner-study {
+    margin: 0 auto;
+  }
+}
+
+.main__events__congratulations {
+  padding: 0 0 35px 0;
+}
+
+.description-preview.active {
+  display: none;
+}
+
+.hidden-description {
+  display: none;
+}
+.hidden-description.active {
+  display: block;
+  max-height: 615px;
+  overflow-y: scroll;
+}
+.hidden-description.active::-webkit-scrollbar {
+  width: 10px;
+}
+.hidden-description.active::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.hidden-description.active::-webkit-scrollbar-thumb {
+  background: #36c9a4;
+  border-radius: 10px;
+}
+
+.nominations__title {
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1180 - 320)));
+  color: white;
+  padding: 10px 0;
+  display: block;
+  text-align: center;
+}
+
+.contest__results {
+  padding: 2px 25px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / (1180 - 320)));
+  color: white;
+}
+
+.button {
+  height: 50px;
+  width: 175px;
+  background: linear-gradient(61.4deg, #00FFFF 10.96%, #66FFCC 86.16%);
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2%;
+  font-family: "BankGothicMdBT";
+  margin: 40px 0 0 0;
+}
+.button:hover {
+  background: transparent;
+  color: #36c9a4;
+  border: 2px solid #36c9a4;
+}
+@media (max-width: 968px) {
+  .button {
+    margin: 40px auto 0 auto;
+  }
+}
+
+.main__events__partnership {
+  padding: 0 0 35px 0;
+}
+
+.main__events__art {
+  padding: 0 0 35px 0;
+}
+
+.description-preview-three.active {
+  display: none;
+}
+
+.hidden-description-three {
+  display: none;
+}
+.hidden-description-three.active {
+  display: block;
+  max-height: 615px;
+  overflow-y: scroll;
+}
+.hidden-description-three.active::-webkit-scrollbar {
+  width: 10px;
+}
+.hidden-description-three.active::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.hidden-description-three.active::-webkit-scrollbar-thumb {
+  background: #36c9a4;
+  border-radius: 10px;
+}
+
+.button-three {
+  height: 50px;
+  width: 175px;
+  background: linear-gradient(61.4deg, #00FFFF 10.96%, #66FFCC 86.16%);
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2%;
+  font-family: BankGothicMdBT;
+  margin: 40px 0 0 0;
+}
+.button-three:hover {
+  background: transparent;
+  color: #36c9a4;
+  border: 2px solid #36c9a4;
+}
+@media (max-width: 968px) {
+  .button-three {
+    margin: 40px auto 0 auto;
+  }
+}
+
+.main__events__enjin-forum {
+  padding: 0 0 35px 0;
+}
+
+.main__events__searchenj-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description-preview-four a {
+  color: #36c9a4;
+}
+
+.main__events__vouchers {
+  padding: 0 0 35px 0;
+}
+
+.main__events__vouchers-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__events__tipbot {
+  padding: 0 0 35px 0;
+}
+
+.main__events__tipbot-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__events__partn-study {
+  padding: 0 0 35px 0;
+}
+
+.hidden-description-partn-study {
+  display: none;
+}
+.hidden-description-partn-study.active {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 615px;
+}
+.hidden-description-partn-study.active a {
+  color: #36c9a4;
+}
+
+.button-partner-study {
+  height: 50px;
+  width: 175px;
+  background: linear-gradient(61.4deg, #00FFFF 10.96%, #66FFCC 86.16%);
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2%;
+  font-family: BankGothicMdBT;
+  margin: 40px 0 0 0;
+}
+.button-partner-study:hover {
+  background: transparent;
+  color: #36c9a4;
+  border: 2px solid #36c9a4;
+}
+@media (max-width: 968px) {
+  .button-partner-study {
+    margin: 0 auto;
+  }
+}
+
+.main__events__swapbot {
+  padding: 0 0 35px 0;
+}
+
+.main__events__swapbot-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description-preview-eight a {
+  color: #36c9a4;
+}
+
+.footer {
+  margin: 40px 0 0 0;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.footer__container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 10px;
+  }
+}
+
+.footer__upper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__upper__social {
+  flex: 0 0 36px;
+  min-width: 26px;
+}
+.footer__upper__social img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.footer__lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0 0 0;
+}
+
+.footer__lower__logo {
+  padding: 0 0 10px 0;
+  display: flex;
+  flex: 0 0 15px;
+  justify-content: center;
+}
+.footer__lower__logo img {
+  object-fit: cover;
+  width: 15%;
+  height: 15%;
+}
+
+.footer__lower__text {
+  text-align: center;
+  font-family: "BankGothicMdBT";
+  font-size: 24px;
+  line-height: 25px;
+  color: white;
+  opacity: 0.5;
+  padding: 0 0 15px 0;
+  font-size: calc(12px + 8 * ((100vw - 320px) / (1180 - 320)));
+}
