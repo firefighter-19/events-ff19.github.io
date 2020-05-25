@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -85,6 +86,78 @@
     <article class="article">
       <div class="container__events">
         <main class="main__events">
+          <div class="main__events__vouchers-swap">
+            <figure class="main__events__vouchers-swap block__image">
+              <div class="block__image__picture">
+                <img src="source/eventsPage/swapvouchers.png" alt="">
+              </div>
+              <figcaption class="block__image__description">
+                  <span class="description__header">
+                  Our <span class="hashtag">@Falcon_swap_bot</span> is fully tested and Proof of Hold [PoH] system has already launched a timer for the first lucky ones, who have already received their vouchers!
+                  </span>
+                  <span class="description__footer">
+                    Swap tokens for vouchers are officially open! Act until they all run out!
+                  </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="main__events__airdrop-completed">
+            <figure class="main__events__airdrop-completed block__image">
+              <div class="block__image__picture">
+                <img src="source/eventsPage/completedair.png" alt="">
+              </div>
+              <figcaption class="block__image__description">
+                  <span class="description__header">
+                  It is done! All FNT tokens on your wallets, dear holders of the Falcon STAGE collection!
+                  </span>
+                  <span class="description__header">
+                    Airdrop is over!
+                  </span>
+                  <span class="description__footer">
+                    But we are just began our glorious journey! Watch the news carefully!
+                  </span>
+                  <span class="description__footer">
+                    And take care of your STAGE cards, they will come in handy more than once!
+                  </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="main__events__airdrop">
+            <figure class="main__events__airdrop block__image">
+              <div class="block__image__picture">
+                <img src="source/eventsPage/airdrop.png" alt="">
+              </div>
+              <figcaption class="block__image__description">
+                  <span class="description__header">
+                  Well, it's time for the long-awaited news!
+                  </span>
+                  <span class="description__footer">
+                    Falcon Project FNT Token Airdrop Conditions. Please, <a class="link" href="https://telegra.ph/FALCON-project--CHto-takoe-Proof-of-Hold-05-03">read</a> very carefully!
+                  </span>
+                  <span class="description__footer">
+                    ad carefully while holding STAGE cards to your chest!
+                  </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="main__events__poh">
+            <figure class="main__events__poh block__image">
+              <div class="block__image__picture">
+                <img src="source/eventsPage/poh.png" alt="">
+              </div>
+              <figcaption class="block__image__description">
+                  <span class="description__header">
+                  Falcon Project is ahead of schedule!
+                  </span>
+                  <span class="description__footer">
+                    Proof of Hold PoH technology has been launched and is waiting for your vouchers to launch a hold counter! 😎
+                  </span>
+                  <span class="description__footer">
+                    You can learn more about Proof of Hold technology in <a class="link" href="https://telegra.ph/FALCON-project--CHto-takoe-Proof-of-Hold-05-03">this short explanation</a>
+                  </span>
+              </figcaption>
+            </figure>
+          </div>
           <div class="main__events__newmembers">
             <figure class="main__events__partnership block__image">
               <div class="block__image__picture">
@@ -340,7 +413,7 @@
                     </li>
                     <li>
                       <ol>
-                        
+
                       </ol>
                     </li>
                   </ul>
