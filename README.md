@@ -50,7 +50,7 @@
               <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path id="link-2" fill-rule="evenodd" clip-rule="evenodd" d="M12.3039 6.21687C8.03922 5.9759 4.26471 4 1.71569 0.915663C1.27451 1.68675 1.02941 2.55422 1.02941 3.46988C1.02941 5.20482 1.96078 6.74699 3.33333 7.66265C2.5 7.66265 1.66667 7.42169 0.980392 7.03614V7.08434C0.980392 9.54217 2.7451 11.5663 5.09804 12.0482C4.65686 12.1446 4.21569 12.241 3.77451 12.241C3.43137 12.241 3.08824 12.1928 2.79412 12.1446C3.43137 14.1205 5.34314 15.6145 7.59804 15.6145C5.83333 17.012 3.62745 17.7831 1.22549 17.7831C0.784314 17.7831 0.392157 17.7831 0 17.7349C2.2549 19.1807 4.95098 20 7.84314 20C17.3039 20 22.451 12.2892 22.451 5.63855V4.96386C23.4314 4.28916 24.3137 3.37349 25 2.36145C24.0686 2.74699 23.0882 3.03614 22.0588 3.18072C23.1373 2.55422 23.9216 1.54217 24.3137 0.385542C23.3333 0.963855 22.2059 1.3494 21.0784 1.59036C20.1471 0.626506 18.7745 0 17.3039 0C14.4608 0 12.1569 2.26506 12.1569 5.06024C12.1569 5.44578 12.2059 5.83133 12.3039 6.21687Z" fill="url(#paint0_linear)"/>
               <defs>
-              <linearGradient id="paint0_linear" x1="-5.44015e-08" y1="15.8621" x2="24.5683" y2="14.9919" gradientUnits="userSpaceOnUse">
+              <linearGradient id="paint0_linear1" x1="-5.44015e-08" y1="15.8621" x2="24.5683" y2="14.9919" gradientUnits="userSpaceOnUse">
               <stop offset="1" stop-color="#FF00A8"/>
               <stop offset="1" stop-color="#FF003D"/>
               </linearGradient>
@@ -61,7 +61,7 @@
               <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path id="link-3" fill-rule="evenodd" clip-rule="evenodd" d="M19.2031 4.41023L9.28466 13.2206L9.05612 14.4343L8.82759 16.8616L6.9079 11.4225L18.746 4.00567C18.746 4.00567 19.4773 3.55616 19.4773 4.00567C19.4773 4.00567 19.6144 4.05062 19.2031 4.41023ZM21.8084 0.229806L0.874572 8.276C0.874572 8.276 -0.0852757 8.6356 0.00613834 9.21996C0.0518453 9.84927 0.874572 10.119 0.874572 10.119L5.6281 11.6923L8.59905 19.4687C8.8733 19.6036 9.14754 19.3788 9.14754 19.3788L12.667 15.9626L17.8319 19.8283C19.2945 20.4577 19.7973 19.1541 19.7973 19.1541L23.5452 0.724264C23.5452 -0.534358 21.8084 0.229806 21.8084 0.229806Z" fill="url(#paint0_linear)"/>
               <defs>
-              <linearGradient id="paint0_linear" x1="-7.25744e-08" y1="15.8621" x2="23.1419" y2="15.0901" gradientUnits="userSpaceOnUse">
+              <linearGradient id="paint0_linear2" x1="-7.25744e-08" y1="15.8621" x2="23.1419" y2="15.0901" gradientUnits="userSpaceOnUse">
               <stop offset="1" stop-color="#FF00A8"/>
               <stop offset="1" stop-color="#FF003D"/>
               </linearGradient>
@@ -85,7 +85,7 @@
     </header>
     <article class="article">
       <div class="container__events">
-        <main class="main__events">
+        <div class="main__events">
           <div class="main__events__vouchers-swap">
             <figure class="main__events__vouchers-swap block__image">
               <div class="block__image__picture">
@@ -223,7 +223,7 @@
               </div>
               <figcaption class="block__image__description">
                 <span class="description__header">Now the FNT token is officially added to the VeriSafe</span>
-                <a class="hashtag" href="@TipGramBot bot">@TipGramBot</a>
+                <span class="hashtag">@TipGramBot</span>
                 <span class="description__footer">
                   With it, you can receive and send donations in Falcon tokens via telegram chats! FNT is getting closer! Mass adoption is coming
                 </span>
@@ -273,11 +273,11 @@
                 <span class="description__footer">After a long discussion, we are finally ready to name our glorious winners of the art competition</span>
                 <div class="hidden-description">
                   <ul>
-                    <span class="description__header">Nominations and prizes:</span>
+                    <li class="description__header">Nominations and prizes:</li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Video clip on the Falcon Project</span>
-                        <p class="hashtag">#video</p>
+                        <li class="nominations__title">Video clip on the Falcon Project</li>
+                        <li class="hashtag">#video</li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1112">1st place - 7 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1012">2nd place - 5 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/979">3rd place - 3 million FNT</a></li>
@@ -285,8 +285,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Gif animation on the theme of the Falcon Project</span>
-                        <p class="hashtag">#gif</p>
+                        <li class="nominations__title">Gif animation on the theme of the Falcon Project</li>
+                        <li class="hashtag">#gif</li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/892">1st place - 1 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/914">2nd place - 800 thousand FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1091">3rd place - 600 thousand FNT</a></li>
@@ -296,8 +296,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Creative promotional image for Twitter</span>
-                        <p class="hashtag">#image</p>
+                        <li class="nominations__title">Creative promotional image for Twitter</li>
+                        <li class="hashtag">#image</li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/885">1st place - 1 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1059">2nd place - 500 thousand FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1110">3rd place - 250 thousand FNT</a></li>
@@ -307,8 +307,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">The best Falcon chat stickers. Evaluation of three stickers at once: greeting, approval, rejoicing</span>
-                        <p class="hashtag">#sticker</p>
+                        <li class="nominations__title">The best Falcon chat stickers. Evaluation of three stickers at once: greeting, approval, rejoicing</li>
+                        <li class="hashtag">#sticker</li>
                         <li class="contest__results"><a class="link" href="https://t.me/addstickers/FalconSticker">1st place - 1.5 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/addstickers/FalconProject">2nd place - 1 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/addstickers/FalconProject">3rd place - 700 thousand FNT</a></li>
@@ -316,8 +316,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Category HUMOR. Image, video, motivator and other visual work.</span>
-                        <p class="hashtag">#haha</p>
+                        <li class="nominations__title">Category HUMOR. Image, video, motivator and other visual work.</li>
+                        <li class="hashtag">#haha</li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/908">1st place - 1 million FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1049">2nd place - 550 thousand FNT</a></li>
                         <li class="contest__results"><a class="link" href="https://t.me/Falcon_official/1104">3rd place - 550 thousand FNT</a></li>
@@ -327,12 +327,12 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">After viewing all the works, the administration decided to award two more participants with incentive prizes of 500 thousand FNT:</span>
+                        <li class="nominations__title">After viewing all the works, the administration decided to award two more participants with incentive prizes of 500 thousand FNT:</li>
                         <li class="contest__results">1) For real video shooting and props - 500 thousand FNT <a class="link" href="https://t.me/Falcon_official/1064"></a>
                         <p class="hashtag">@odesskot2</p>
                         </li>
-                        <p class="contest__results">For the will to win and participation in various nominations - 500 thousand FNT - <a class="hashtag" href="#">@DimaM1993</a> Congratulations to all the winners and thank all the participants for their excellent work! 🥳 We will definitely be holding similar contests again! 👏 __ 📢 To receive reward, need to send your Ethereum address in direct messages<a class="hashtag" href="#">@Lav_rus</a>
-                        </p>
+                        <li class="contest__results">For the will to win and participation in various nominations - 500 thousand FNT - <a class="hashtag" href="#">@DimaM1993</a> Congratulations to all the winners and thank all the participants for their excellent work! 🥳 We will definitely be holding similar contests again! 👏 __ 📢 To receive reward, need to send your Ethereum address in direct messages<a class="hashtag" href="#">@Lav_rus</a>
+                        </li>
                       </ol>
                     </li>
                   </ul>
@@ -363,11 +363,11 @@
                 <span class="description__header">Attention! Falcon Project announces a massive creative art competition with a prize pool of 25,000,000 FNT! Everyone can take part!</span>
                 <div class="hidden-description-three">
                   <ul>
-                    <span class="description__header">Nominations and prizes:</span>
+                    <li class="description__header">Nominations and prizes:</li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Video clip on the Falcon Project</span>
-                        <p class="hashtag">#video</p>
+                        <li class="nominations__title">Video clip on the Falcon Project</li>
+                        <li class="hashtag">#video</li>
                         <li class="contest__results">1st place - 7 million FNT</li>
                         <li class="contest__results">2nd place - 5 million FNT</li>
                         <li class="contest__results">3rd place - 3 million FNT</li>
@@ -375,8 +375,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Gif animation on the theme of the Falcon Project</span>
-                        <p class="hashtag">#gif</p>
+                        <li class="nominations__title">Gif animation on the theme of the Falcon Project</li>
+                        <li class="hashtag">#gif</li>
                         <li class="contest__results">1st place - 1 million FNT</li>
                         <li class="contest__results">2nd place - 800 thousand FNT</li>
                         <li class="contest__results">3rd place - 600 thousand FNT</li>
@@ -386,8 +386,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Creative promotional image for Twitter</span>
-                        <p class="hashtag">#image</p>
+                        <li class="nominations__title">Creative promotional image for Twitter</li>
+                        <li class="hashtag">#image</li>
                         <li class="contest__results">1st place - 1 million FNT</li>
                         <li class="contest__results">2nd place - 500 thousand FNT</li>
                         <li class="contest__results">3-5 place - 250 thousand FNT</li>
@@ -395,8 +395,8 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">The best Falcon chat stickers. Evaluation of three stickers at once: greeting, approval, rejoicing</span>
-                        <p class="hashtag">#sticker</p>
+                        <li class="nominations__title">The best Falcon chat stickers. Evaluation of three stickers at once: greeting, approval, rejoicing</li>
+                        <li class="hashtag">#sticker</li>
                         <li class="contest__results">1st place - 1.5 million FNT</li>
                         <li class="contest__results">2nd place - 1 million FNT</li>
                         <li class="contest__results">3rd place - 700 thousand FNT</li>
@@ -404,11 +404,11 @@
                     </li>
                     <li>
                       <ol>
-                        <span class="nominations__title">Category HUMOR. Image, video, motivator and other visual work.</span>
-                        <p class="hashtag">#haha</p>
-                        <li class="contest__results">1st place - 1 million FNT</a></li>
-                        <li class="contest__results">2nd place - 550 thousand FNT</a></li>
-                        <li class="contest__results">3-5 place - 550 thousand FNT</a></li>
+                        <li class="nominations__title">Category HUMOR. Image, video, motivator and other visual work.</li>
+                        <li class="hashtag">#haha</li>
+                        <li class="contest__results">1st place - 1 million FNT</li>
+                        <li class="contest__results">2nd place - 550 thousand FNT</li>
+                        <li class="contest__results">3-5 place - 550 thousand FNT</li>
                       </ol>
                     </li>
                     <li>
@@ -422,7 +422,7 @@
               </figcaption>
             </figure>
           </div>
-        </main>
+        </div>
       </div>
     </article>
     <footer class="footer">
