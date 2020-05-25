@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 @font-face {
   font-family: "Bankir-Retro";
-  src: url("fonts/Bankir-Retro.eot");
+  src: url("../fonts/Bankir-Retro.eot");
   src: local("☺"), url("../fonts/fonts/Bankir-Retro.woff") format("woff"), url("fonts/Bankir-Retro.ttf") format("truetype"), url("fonts/Bankir-Retro.svg") format("svg");
   font-weight: 400;
   font-style: normal;
@@ -428,14 +428,27 @@ body.lock {
     padding: 0 0 30px 0;
   }
 }
+@media (max-width: 768px) {
+  .block__image__picture {
+    max-width: 300px;
+    padding: 0 0 5px 0;
+  }
+}
 
 .block__image__description {
   max-width: 500px;
+  min-height: 290px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   text-align: left;
+}
+@media (max-width: 768px) {
+  .block__image__description {
+    max-width: 300px;
+    min-height: 150px;
+  }
 }
 
 .description__header {
@@ -463,16 +476,39 @@ body.lock {
   color: #36c9a4;
 }
 
+.main__events__vouchers-swap {
+  padding: 0 0 35px 0;
+  align-items: center;
+}
+
+.main__events__airdrop-completed {
+  padding: 0 0 35px 0;
+  align-items: center;
+}
+
+.main__events__airdrop {
+  padding: 0 0 35px 0;
+  align-items: center;
+}
+
+.main__events__poh {
+  padding: 0 0 35px 0;
+  align-items: center;
+}
+
 .main__events__newmembers {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .main__events__tipbot {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .main__events__partn-study {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .hidden-description-partn-study {
@@ -513,6 +549,7 @@ body.lock {
 
 .main__events__congratulations {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .description-preview.active {
@@ -578,10 +615,12 @@ body.lock {
 
 .main__events__partnership {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .main__events__art {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .description-preview-three.active {
@@ -617,7 +656,7 @@ body.lock {
   text-align: center;
   text-transform: uppercase;
   border-radius: 2%;
-  font-family: BankGothicMdBT;
+  font-family: "BankGothicMdBT";
   margin: 40px 0 0 0;
 }
 .button-three:hover {
@@ -633,6 +672,7 @@ body.lock {
 
 .main__events__enjin-forum {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .main__events__searchenj-description {
@@ -648,28 +688,17 @@ body.lock {
 
 .main__events__vouchers {
   padding: 0 0 35px 0;
-}
-
-.main__events__vouchers-description {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .main__events__tipbot {
   padding: 0 0 35px 0;
-}
-
-.main__events__tipbot-description {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .main__events__partn-study {
   padding: 0 0 35px 0;
+  align-items: center;
 }
 
 .hidden-description-partn-study {
@@ -694,7 +723,7 @@ body.lock {
   text-align: center;
   text-transform: uppercase;
   border-radius: 2%;
-  font-family: BankGothicMdBT;
+  font-family: "BankGothicMdBT";
   margin: 40px 0 0 0;
 }
 .button-partner-study:hover {
@@ -710,13 +739,7 @@ body.lock {
 
 .main__events__swapbot {
   padding: 0 0 35px 0;
-}
-
-.main__events__swapbot-description {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .description-preview-eight a {
