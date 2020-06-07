@@ -73,46 +73,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-@font-face {
-  font-family: "Bankir-Retro";
-  src: url("../fonts/Bankir-Retro.eot");
-  src: local("☺"), url("../fonts/fonts/Bankir-Retro.woff") format("woff"), url("fonts/Bankir-Retro.ttf") format("truetype"), url("fonts/Bankir-Retro.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BankGothicMdBT";
-  src: url("../fonts/BankGothicMdBT.eot");
-  src: local("☺"), url("../fonts/BankGothicMdBT.woff") format("woff"), url("../fonts/BankGothicMdBT.ttf") format("truetype"), url("../fonts/BankGothicMdBT.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-body.lock {
-  overflow: hidden;
-}
-
-.wrapper {
-  background-color: black;
-}
-
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
 .wrapper__background {
   position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
-}
-@media (max-width: 968px) {
-  .wrapper__background {
-    position: fixed;
-    opacity: 0.5;
-  }
+  flex-grow: 1;
 }
 
 .wrapper__background__left {
@@ -131,10 +98,11 @@ body.lock {
 @media (max-width: 968px) {
   .wrapper__background__left {
     height: 70%;
-    width: 70%;
+    width: 100%;
     position: absolute;
     left: 0;
     top: -25%;
+    opacity: 1;
   }
 }
 
@@ -155,29 +123,36 @@ body.lock {
   .wrapper__background__right {
     height: 70%;
     width: 70%;
+    position: absolute;
     right: 0;
     bottom: -7%;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper__background__right {
+    bottom: 0%;
   }
 }
 @media (max-width: 480px) {
   .wrapper__background__right {
     height: 70%;
     width: 70%;
+    position: absolute;
     right: 0;
-    bottom: -10%;
+    bottom: 0%;
   }
 }
 
 .header {
   position: fixed;
-  height: 90px;
+  height: 94px;
   width: 100%;
   z-index: 1;
   flex-grow: 1;
 }
 @media (max-width: 968px) {
   .header {
-    height: 80px;
+    height: 83px;
   }
 }
 .header:before {
@@ -259,7 +234,6 @@ body.lock {
 
 .nav__menu__list {
   display: flex;
-  justify-content: flex-end;
 }
 
 .nav__menu__list-item {
@@ -271,8 +245,8 @@ body.lock {
 @media (max-width: 968px) {
   .nav__menu__list-item li {
     opacity: 0;
-    padding: 135px 0 0 0;
-    min-height: 400px;
+    margin: 100px 0 0 0;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -290,11 +264,16 @@ body.lock {
   }
 }
 .item__link {
-  color: #36c9a4;
+  display: inline-block;
+  background: linear-gradient(55.01deg, #00FFFF 0%, #66FFCC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 0 15px;
 }
 .item__link:hover {
-  color: white;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav__menu__links {
@@ -380,12 +359,250 @@ body.lock {
   }
   .nav__container__burger.active span:first-child {
     transform: rotate(45deg);
-    top: 16px;
+    top: 17px;
   }
   .nav__container__burger.active span:last-child {
     transform: rotate(-45deg);
     top: 17px;
   }
+}
+
+.footer {
+  margin: 40px 0 0 0;
+  position: relative;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.footer__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 10px;
+  }
+}
+
+.footer__upper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 100px 0;
+}
+@media (max-width: 768px) {
+  .footer__upper {
+    margin: 0 0 50px 0;
+  }
+}
+
+.footer__upper__social {
+  flex: 0 0 50px;
+  margin: 0 40px;
+  position: relative;
+}
+.footer__upper__social a svg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.footer__upper__social a svg:hover {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+}
+@media (max-width: 768px) {
+  .footer__upper__social {
+    flex: 0 0 30px;
+    margin: 0;
+  }
+}
+
+.footer__lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0 0 0;
+}
+
+.footer__lower__logo {
+  padding: 0 0 10px 0;
+  display: flex;
+  flex: 0 0 15px;
+  justify-content: center;
+}
+.footer__lower__logo img {
+  object-fit: cover;
+  width: 15%;
+  height: 15%;
+}
+
+.footer__lower__text {
+  text-align: center;
+  font-family: "BankGothicMdBT";
+  font-size: 24px;
+  line-height: 25px;
+  color: white;
+  opacity: 0.5;
+  padding: 0 0 15px 0;
+  font-size: calc(12px + 8 * ((100vw - 320px) / (1180 - 320)));
+}
+
+.popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease 0s;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  font-family: "BankGothicMdBT";
+  background-color: #fff;
+  color: black;
+  max-width: 800px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.popup__content.swap {
+  position: relative;
+  padding: 0;
+}
+.popup__content.services {
+  padding: 0;
+}
+
+.popup__title {
+  font-size: calc(14px + 12 * ((100vw - 320px) / (1180 - 320)));
+  padding: 0 0 15px 0;
+}
+
+.popup__link {
+  padding: 10px 0;
+  font-size: calc(12px + 8 * ((100vw - 320px) / (1180 - 320)));
+  color: #36c9a4;
+  display: flex;
+  justify-content: center;
+}
+.popup__link:hover {
+  color: red;
+}
+.popup__link img {
+  position: relative;
+  top: 1px;
+  right: 10px;
+}
+@media (max-width: 767px) {
+  .popup__link img {
+    top: 0;
+  }
+}
+
+.close-popup {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  flex: 0 0 15px;
+  max-width: 25px;
+}
+.close-popup img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.popup__title__swap {
+  display: flex;
+  flex: 0 0 400px;
+  background-color: black;
+}
+.popup__title__swap img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.popup__swap-bot {
+  position: absolute;
+  display: flex;
+  flex: 0 0 150px;
+  max-width: 100px;
+}
+
+.popup__bot-link {
+  position: absolute;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  flex: 0 0 150px;
+  max-width: 100px;
+}
+.popup__bot-link img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .popup__bot-link {
+    max-width: 60px;
+  }
+}
+
+@font-face {
+  font-family: "Bankir-Retro";
+  src: url("../fonts/Bankir-Retro.eot");
+  src: local("☺"), url("../fonts/fonts/Bankir-Retro.woff") format("woff"), url("fonts/Bankir-Retro.ttf") format("truetype"), url("fonts/Bankir-Retro.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BankGothicMdBT";
+  src: url("../fonts/BankGothicMdBT.eot");
+  src: local("☺"), url("../fonts/BankGothicMdBT.woff") format("woff"), url("../fonts/BankGothicMdBT.ttf") format("truetype"), url("../fonts/BankGothicMdBT.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+body.lock {
+  overflow: hidden;
+  background-color: black;
+}
+
+.wrapper {
+  background-color: black;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .container__events {
@@ -396,7 +613,7 @@ body.lock {
 
 .main__events {
   position: relative;
-  padding: 150px 10px;
+  padding: 150px 15px 20px 15px;
   display: flex;
   flex-direction: column;
 }
@@ -409,6 +626,12 @@ body.lock {
   .block__image {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .block__image {
+    align-items: flex-start;
   }
 }
 
@@ -423,49 +646,60 @@ body.lock {
   height: 100%;
   object-fit: cover;
 }
-@media (max-width: 968px) {
-  .block__image__picture {
-    padding: 0 0 30px 0;
-  }
-}
 @media (max-width: 768px) {
   .block__image__picture {
-    max-width: 300px;
-    padding: 0 0 5px 0;
+    max-width: 400px;
   }
 }
 
 .block__image__description {
-  max-width: 500px;
+  max-width: 520px;
   min-height: 290px;
+  flex-grow: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   text-align: left;
 }
+@media (max-width: 1120px) {
+  .block__image__description {
+    padding: 0 0 0 20px;
+    max-width: 500px;
+  }
+}
+@media (max-width: 968px) {
+  .block__image__description {
+    padding: 0;
+    text-align: justify;
+    min-height: 250px;
+  }
+}
 @media (max-width: 768px) {
   .block__image__description {
-    max-width: 300px;
+    max-width: 400px;
     min-height: 150px;
+    padding: 0 0 20px 0;
   }
+}
+
+.hidden {
+  justify-content: space-between;
 }
 
 .description__header {
   color: white;
-  font-size: calc(14px + 6 * ((100vw - 320px) / (1180 - 320)));
+  font-size: calc(10px + 6 * ((100vw - 320px) / (1180 - 320)));
   line-height: 30px;
-}
-@media (max-width: 968px) {
-  .description__header {
-    margin: 0 0 20px 0;
-  }
 }
 
 .description__footer {
   color: white;
-  font-size: calc(12px + 2 * ((100vw - 320px) / (1180 - 320)));
-  line-height: 24px;
+  font-size: calc(10px + 2 * ((100vw - 320px) / (1180 - 320)));
+  line-height: 28px;
+}
+.description__footer.cursive {
+  font-style: italic;
 }
 
 .hashtag {
@@ -476,84 +710,24 @@ body.lock {
   color: #36c9a4;
 }
 
-.main__events__vouchers-swap {
-  padding: 0 0 35px 0;
+.padding {
+  padding: 0 0 70px 0;
   align-items: center;
-}
-
-.main__events__airdrop-completed {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.main__events__airdrop {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.main__events__poh {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.main__events__newmembers {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.main__events__tipbot {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.main__events__partn-study {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.hidden-description-partn-study {
-  display: none;
-}
-.hidden-description-partn-study.active {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  max-height: 615px;
-}
-.hidden-description-partn-study.active a {
-  color: #36c9a4;
-}
-
-.button-partner-study {
-  height: 50px;
-  width: 175px;
-  background: linear-gradient(61.4deg, #00FFFF 10.96%, #66FFCC 86.16%);
-  color: black;
-  font-size: 18px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 2%;
-  font-family: "BankGothicMdBT";
-  margin: 40px 0 0 0;
-}
-.button-partner-study:hover {
-  background: transparent;
-  color: #36c9a4;
-  border: 2px solid #36c9a4;
 }
 @media (max-width: 968px) {
-  .button-partner-study {
-    margin: 0 auto;
+  .padding {
+    padding: 0 0 40px 0;
   }
 }
 
 .main__events__congratulations {
   padding: 0 0 35px 0;
-  align-items: center;
+  align-items: flex-start;
 }
-
-.description-preview.active {
-  display: none;
+@media (max-width: 968px) {
+  .main__events__congratulations {
+    align-items: center;
+  }
 }
 
 .hidden-description {
@@ -602,15 +776,20 @@ body.lock {
   font-family: "BankGothicMdBT";
   margin: 40px 0 0 0;
 }
-.button:hover {
+.button.active {
   background: transparent;
   color: #36c9a4;
   border: 2px solid #36c9a4;
 }
 @media (max-width: 968px) {
   .button {
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
   }
+}
+.button.no-touch:hover {
+  background: transparent;
+  color: #36c9a4;
+  border: 2px solid #36c9a4;
 }
 
 .main__events__partnership {
@@ -620,7 +799,12 @@ body.lock {
 
 .main__events__art {
   padding: 0 0 35px 0;
-  align-items: center;
+  align-items: flex-start;
+}
+@media (max-width: 968px) {
+  .main__events__art {
+    align-items: center;
+  }
 }
 
 .description-preview-three.active {
@@ -659,7 +843,7 @@ body.lock {
   font-family: "BankGothicMdBT";
   margin: 40px 0 0 0;
 }
-.button-three:hover {
+.button-three.active {
   background: transparent;
   color: #36c9a4;
   border: 2px solid #36c9a4;
@@ -668,6 +852,11 @@ body.lock {
   .button-three {
     margin: 40px auto 0 auto;
   }
+}
+.button-three.no-touch:hover {
+  background: transparent;
+  color: #36c9a4;
+  border: 2px solid #36c9a4;
 }
 
 .main__events__enjin-forum {
@@ -696,47 +885,6 @@ body.lock {
   align-items: center;
 }
 
-.main__events__partn-study {
-  padding: 0 0 35px 0;
-  align-items: center;
-}
-
-.hidden-description-partn-study {
-  display: none;
-}
-.hidden-description-partn-study.active {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  max-height: 615px;
-}
-.hidden-description-partn-study.active a {
-  color: #36c9a4;
-}
-
-.button-partner-study {
-  height: 50px;
-  width: 175px;
-  background: linear-gradient(61.4deg, #00FFFF 10.96%, #66FFCC 86.16%);
-  color: black;
-  font-size: 18px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 2%;
-  font-family: "BankGothicMdBT";
-  margin: 40px 0 0 0;
-}
-.button-partner-study:hover {
-  background: transparent;
-  color: #36c9a4;
-  border: 2px solid #36c9a4;
-}
-@media (max-width: 968px) {
-  .button-partner-study {
-    margin: 0 auto;
-  }
-}
-
 .main__events__swapbot {
   padding: 0 0 35px 0;
   align-items: center;
@@ -744,67 +892,4 @@ body.lock {
 
 .description-preview-eight a {
   color: #36c9a4;
-}
-
-.footer {
-  margin: 40px 0 0 0;
-  position: relative;
-  justify-content: flex-end;
-}
-
-.footer__container {
-  max-width: 400px;
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .footer__container {
-    padding: 10px;
-  }
-}
-
-.footer__upper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.footer__upper__social {
-  flex: 0 0 36px;
-  min-width: 26px;
-}
-.footer__upper__social img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.footer__lower {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 35px 0 0 0;
-}
-
-.footer__lower__logo {
-  padding: 0 0 10px 0;
-  display: flex;
-  flex: 0 0 15px;
-  justify-content: center;
-}
-.footer__lower__logo img {
-  object-fit: cover;
-  width: 15%;
-  height: 15%;
-}
-
-.footer__lower__text {
-  text-align: center;
-  font-family: "BankGothicMdBT";
-  font-size: 24px;
-  line-height: 25px;
-  color: white;
-  opacity: 0.5;
-  padding: 0 0 15px 0;
-  font-size: calc(12px + 8 * ((100vw - 320px) / (1180 - 320)));
 }
